@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>                                                                             
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html                                                                                                                    
+	xmlns="http://www.w3.org/1999/xhtml"                                                                                 
+	xmlns:h="http://java.sun.com/jsf/html"                                                                               
+>                                                                                                                        
+<head>                                                                                                                   
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />                                           
+	<link rel="stylesheet" href="css/main.css" />                                                                        
+	<title>Cadastro</title>                                                                                              
+</head>                                                                                                                  
+<body>                                                                                                                   
+	<section>                                                                                                            
+		<article>                                                                                                        
+			<h:form>                                                                                                     
+				<fieldset>                                                                                               
+					<div>                                                                                                
+						<legend>                                                                                         
+							<b>Novo Usuário</b>                                                                          
+						</legend>                                                                                        
+						<h:outputLabel for="input-nome">Nome: </h:outputLabel>                                           
+						<h:inputText id="input-nome" value="#{pessoa.nome}" />                                      
+					</div>                                                                                               
+					<h:commandButton class="botao-criar" value="Criar" type="submit" action="#{pessoa.addNome()}"/>      
+				</fieldset>                                                                                              
+			</h:form>                                                                                                    
+		</article>                                                                                                       
+		<article>                                                                                                        
+			<table>                                                                                                      
+				<caption>Usuários Registrados</caption>                                                                  
+				<tr>                                                                                                     
+					<th>Id</th>                                                                                          
+					<th>Nome</th>                                                                                        
+				</tr>			                                                                                                     
+				<h:outputText value="#{pessoa.renderizarNomesParaTabela()}" escape="false" />                                                                                                                                                                                                    
+			</table>                                                                                                     
+		</article>                                                                                                       
+	</section>                                                                                                           
+</body>                                                                                                                  
+</html>                                                                                                                  
